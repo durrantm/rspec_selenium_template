@@ -3,6 +3,8 @@ require 'capybara'
 require 'capybara/rspec'
 require 'capybara/dsl'
 require 'webdrivers'
+require 'yaml'
+require_relative 'support/page_object'
 
 Capybara.run_server = false
 Capybara.default_driver = :chrome
@@ -13,11 +15,10 @@ Capybara.register_driver :chrome do |app|
 end
 
 RSpec.configure do |config|
-  config.treat_symbols_as_metadata_keys_with_true_values = true
   config.run_all_when_everything_filtered = true
   config.filter_run :focus
   config.order = 'random'
-  config.before(:all) do
+  config.before(:each) do
     @root = '/'
   end
 end

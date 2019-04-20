@@ -1,0 +1,10 @@
+example_by_css_id: 'the_id'
+example_last_name: 'input#last_name'
+example_show_more_records: 'button.show_more'
+example_add_user: '#add div:nth-child(4)'
+example_consent_checked: '[name=radioConsent][checked=checked]'
+example_regulatory_checked: '[name=radioRegulatory][value=Yes]'
+example_land_grant_link: 'form#credentials p.buton a'
+example_just_by_name: '[name=make_payment]'
+#
+search: "input[aria-label='Search']"
